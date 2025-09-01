@@ -76,7 +76,7 @@ body {
 }
 
 .cover.cover-right {
-    z-index: 100;
+    z-index: 10;
     transition: transform 1s cubic-bezier(.645, .045, .355, 1);
 }
 
@@ -197,7 +197,7 @@ body {
 }
 
 .book-page.page-right {
-    z-index: 0;
+    z-index: 5;
     position: absolute;
     right: 0;
     transform-style: preserve-3d;
@@ -219,15 +219,14 @@ body {
     background: var(--pages-color);
     padding: 1.5rem 2rem 3.5rem 2rem;
     backface-visibility: hidden;
-    overflow: hidden;
 }
 
 .book-page .page-front {
-    transform: rotateY(0deg);
+    transform: rotateY(0deg)translateZ(1px);
 }
 
 .book-page .page-back {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) translateZ(1px);
 }
 
 .book .book-page.page-left {
@@ -674,13 +673,13 @@ body {
 
 :root.darkmode {
     --bg-color: #37353E;
-    --main-color: #21335e;
+    --main-color: #29435C;
     --text-color: #222831;
     --second-text-color: #EEEEEE;
     --white-color: #fff;
     --cover-color: linear-gradient(45deg, #404258, #474E68);
-    --pages-color: linear-gradient(90deg, #b6c0c7, #9aa1be);
+    --pages-color: linear-gradient(90deg, #F4EEE0, #948979);
     --border: .125rem solid #31363F;
     --box-shadow: 0 0 .6rem rgba(0, 0, 0, .2);
-    --sidebar: #444f63;
+    --sidebar: #7A7A73;
 }
