@@ -23,15 +23,13 @@ export default function Cover() {
 
     return (
         <>
-            <div className="wrapper">
-                <div className="cover cover-left">
-                    <audio id="bg-music" loop>
-                        <source src="/rainbow.mp3" type="audio/mpeg" />
-                    </audio>
-                </div>
+            <div className="cover cover-left">
+                <audio id="bg-music" loop>
+                    <source src="/rainbow.mp3" type="audio/mpeg" />
+                </audio>
+            </div>
 
-                <div className="cover cover-right">
-                </div>
+            <div className="cover cover-right">
             </div>
         </>
     );
