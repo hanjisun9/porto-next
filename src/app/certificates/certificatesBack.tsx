@@ -17,7 +17,7 @@ export default function CertificatesBack() {
                         </div>
                     </div>
                     <div className="portofolio-box">
-                        <Image src="/sertifBing2.jpg" alt="" width={200} height={113} />
+                        <Image src="/SertifBing2.jpg" alt="" width={200} height={113} />
                         <div className="portofoli-layer">
                             <h4>Medali Perunggu (Prov)</h4>
                             <p>Sebelum jadi peserta Olimpiade Bahasa Inggris tingkat nasional,
