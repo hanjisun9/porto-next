@@ -91,6 +91,7 @@ body {
   height: 100%;
   display: flex;
   perspective: 2000px;
+  overflow: hidden;
 }
 
 
@@ -198,12 +199,12 @@ body {
 }
 
 .book-page.page-right {
-  z-index: 50;
   position: absolute;
   right: 0;
   transform-style: preserve-3d;
   transform-origin: left;
-  transition: transform 1s cubic-bezier(.645, .045, .355, 1), z-index 0s 0s;
+  transition: transform 0.8s cubic-bezier(.645, .045, .355, 1);
+  transform: rotateY(0deg);
 }
 
 .book-page.page-right.turn {
