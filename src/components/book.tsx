@@ -25,13 +25,30 @@ export default function Book() {
                 const PageTurn = document.getElementById(PageTurnId!) as HTMLDivElement | null;
                 if (!PageTurn) return;
 
+                const pageIndex = Array.from(pages).indexOf(PageTurn);
+                if (pageIndex === -1) return;
+
+                const base = 30;
+                const animMs = 800;
+
                 if (PageTurn.classList.contains('turn')) {
                     PageTurn.classList.remove('turn');
-                    setTimeout(() => { PageTurn.style.zIndex = String(20 - index); }, 500);
                 } else {
                     PageTurn.classList.add('turn');
-                    setTimeout(() => { PageTurn.style.zIndex = String(20 + index); }, 500);
                 }
+
+                PageTurn.style.zIndex = String(base + totalPages * 2 + 10);
+
+                setTimeout(() => {
+                    pages.forEach((p, i) => {
+                        const turned = p.classList.contains('turn');
+                        if (turned) {
+                            p.style.zIndex = String(base + i);
+                        } else {
+                            p.style.zIndex = String(base + totalPages + (totalPages - 1 - i));
+                        }
+                    });
+                }, animMs);
             });
         });
 
